@@ -29,6 +29,21 @@
       "nombre": "Jugo Melon",
       "precio": 500,
       "id": 6
+    },
+    {
+      "nombre": "Casa",
+      "precio": 120000,
+      "id": 7
+    },
+    {
+      "nombre": "Casa",
+      "precio": 120000,
+      "id": 8
+    },
+    {
+      "nombre": "Casa",
+      "precio": 120000,
+      "id": 9
     }
   ]
 }
