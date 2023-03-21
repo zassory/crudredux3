@@ -4,6 +4,7 @@ import {
     AGREGAR_PRODUCTO_ERROR
 } from '../types';
 import clienteAxios from '../config/axios';
+import Swal from 'sweetalert2';
 
 //Crear nuevos productos
 export function crearNuevoProductoAction(producto){
@@ -12,11 +13,25 @@ export function crearNuevoProductoAction(producto){
 
         try{
             // insertar en la API
-            await clienteAxios.post('/hola',producto);//api
+            await clienteAxios.post('/productos',producto);//api
             dispatch( agregarProductoExito(producto) );//state
+
+            //Alerta
+            Swal.fire(
+                'Correcto',
+                'El producto se agregó correctamente',
+                'success'
+            );
         }catch(error){
             console.log(error);
             dispatch( agregarProductoError(true) );
+
+            // alerta de error
+            Swal.fire({
+                icon: 'error',
+                title: 'Hubo un error',
+                text: 'Hubo un error, intente mas tarde'
+            });
         }
     }
 }

@@ -1,6 +1,6 @@
 import React , { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { useNavigate } from 'react-router-dom';
 //Actions de redux
 import { crearNuevoProductoAction } from '../actions/productoActions';
 
@@ -9,6 +9,8 @@ export const NuevoProducto = () => {
   // state del componente
   const [nombre,guardarNombre] = useState('');
   const [precio,guardarPrecio] = useState(0);
+
+  let navigate = useNavigate();
 
   // utilizar useDispatch y te crea una funcion
   const dispatch = useDispatch();
@@ -36,6 +38,8 @@ export const NuevoProducto = () => {
       nombre,
       precio,
     });
+
+    navigate("/");
   }
 
   return (
