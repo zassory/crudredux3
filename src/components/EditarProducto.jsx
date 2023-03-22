@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
+
 export const EditarProducto = () => {
   return (
     <div className="row justify-content-center">
@@ -35,6 +37,9 @@ export const EditarProducto = () => {
               >
                 Guardar Cambios
               </button>
+              <Link to={'/'} className="btn btn-info font-weight-bold text-uppercase d-block w-100 mt-2">
+                Volver
+              </Link>
 
             </form>
           </div>
