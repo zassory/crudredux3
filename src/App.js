@@ -12,14 +12,13 @@ function App() {
     <Router>
       <Provider store={store}>
         <Header />
-
-        <div className="container mt-5">
-          <Routes>
-            <Route path="/" element={<Productos />} />
-            <Route path="/productos/nuevo" element={<NuevoProducto />} />
-            <Route path="/productos/editar/:id" element={<EditarProducto />} />
-          </Routes>
-        </div>
+          <div className="container mt-5">
+            <Routes>
+              <Route path="/" element={<Productos />} />
+              <Route path="/productos/nuevo" element={<NuevoProducto />} />
+              <Route path="/productos/editar/:id" element={<EditarProducto />} />
+            </Routes>
+          </div>
       </Provider>
     </Router>
   );

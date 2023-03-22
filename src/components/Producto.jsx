@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link , useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 //Redux
@@ -44,16 +44,13 @@ export const Producto = ({producto}) => {
   return (
     <tr>
         <td>{nombre}</td>
-        <td><span className='font-weight-bold'>$ {precio}</span></td>
+        <td><span className='font-weight-bold'>${precio}</span></td>
         <td className='acciones'>
             <button
                 type="button"
                 className="btn btn-primary mr-2"
                 onClick={() => redireccionarEdicion(producto)}
-            >
-
-                Editar
-            </button>
+            >Editar</button>
             <button
                 type="button"
                 className='btn btn-danger'

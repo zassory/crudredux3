@@ -127,8 +127,7 @@ const eliminarProductoError = () => ({
 
 // Colocar el producto en edición
 export function obtenerProductoEditar(producto){
-    return async(dispatch) => {
-        console.log('Desde el obtenerProductoAction');
+    return async(dispatch) => {        
         dispatch(  obtenerProductoEditarAction(producto) );
     }
 }
