@@ -9,11 +9,6 @@
       "id": 2,
       "nombre": "Jugo de Naranja",
       "precio": "1"
-    },
-    {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
-      "id": 3
     }
   ]
 }
