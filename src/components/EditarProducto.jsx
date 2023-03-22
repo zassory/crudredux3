@@ -1,8 +1,14 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom';
+import { useDispatch , useSelector } from 'react-redux';
 
 export const EditarProducto = () => {
+
+  // producto a editar
+  const producto = useSelector(state => state.productos.productoEditar);
+  if(!producto) return null;
+  const { nombre , precio , id } = producto;
+
   return (
     <div className="row justify-content-center">
       <div className="col-md-8">
@@ -19,6 +25,7 @@ export const EditarProducto = () => {
                   className='form-control'
                   placeholder='Nombre Producto'
                   name="nombre"
+                  value={nombre}
                   />
               </div>
               <div className="form-group">
@@ -28,6 +35,8 @@ export const EditarProducto = () => {
                   type="number" 
                   className='form-control'
                   placeholder="precio"
+                  name="precio"
+                  value={precio}
                   />
               </div>
 
