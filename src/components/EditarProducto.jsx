@@ -1,5 +1,5 @@
 import React , { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import { useDispatch , useSelector } from 'react-redux';
 
 //actions
@@ -8,6 +8,8 @@ import { editarProductoAction } from '../actions/productoActions';
 export const EditarProducto = () => {
                    
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   // nuevo state de producto
   const [producto,guardarProducto] = useState({
@@ -38,6 +40,7 @@ export const EditarProducto = () => {
     e.preventDefault();
 
     dispatch( editarProductoAction(producto)  );
+    navigate('/');
   }
 
   return (
