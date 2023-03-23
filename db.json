@@ -9,6 +9,11 @@
       "nombre": "Jugo Melon",
       "precio": 400,
       "id": 2
+    },
+    {
+      "nombre": "Jugo de palta",
+      "precio": 1200,
+      "id": 3
     }
   ]
 }

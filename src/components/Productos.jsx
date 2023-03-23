@@ -15,6 +15,7 @@ export const Productos = props => {
     // Consultar la api
     const cargarProductos = () => dispatch( obtenerProductosAction() );
     cargarProductos();
+    // eslint-disable-next-line
   },[]);
 
   // obtener el state
